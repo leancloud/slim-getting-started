@@ -1,5 +1,6 @@
 <?php
 require 'vendor/autoload.php';
+require 'cloud.php';
 
 /*
  * A simple Slim based sample application
@@ -10,8 +11,22 @@ require 'vendor/autoload.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use \LeanCloud\LeanClient;
+use \LeanCloud\Storage\CookieStorage;
+use \LeanCloud\Engine\LeanEngine;
 
 $app = new \Slim\App;
+
+LeanClient::initialize(
+    getenv("LC_APP_ID"),
+    getenv("LC_APP_KEY"),
+    getenv("LC_APP_MASTER_KEY")
+);
+// persist sessionToken in cookie
+LeanClient::setStorage(new CookieStorage());
+
+// start LeanEngine
+LeanEngine::start();
 
 $app->get('/hello/{name}', function (Request $request, Response $response) {
     $name = $request->getAttribute('name');
