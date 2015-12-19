@@ -1,0 +1,4 @@
+<?php
+
+require "../app.php";
+
