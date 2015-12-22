@@ -5,7 +5,7 @@ require 'cloud.php';
 /*
  * A simple Slim based sample application
  *
- * For more examples please see Slim documentation:
+ * See Slim documentation:
  * http://www.slimframework.com/docs/
  */
 
@@ -13,9 +13,9 @@ use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \LeanCloud\LeanClient;
 use \LeanCloud\Storage\CookieStorage;
-use \LeanCloud\Engine\LeanEngine;
+use \LeanCloud\Engine\SlimEngine;
 
-$app = new \Slim\App;
+$app = new \Slim\App();
 
 LeanClient::initialize(
     getenv("LC_APP_ID"),
@@ -25,8 +25,8 @@ LeanClient::initialize(
 // persist sessionToken in cookie
 LeanClient::setStorage(new CookieStorage());
 
-// start LeanEngine
-LeanEngine::start();
+// SlimEngine::enableHttpsRedirect();
+$app->add(new SlimEngine());
 
 $app->get('/hello/{name}', function (Request $request, Response $response) {
     $name = $request->getAttribute('name');
