@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6f5d3d05d70b58db9144bb1ca70c8698",
-    "content-hash": "3b0766dbcef4dfb1a4a2012fef8611d8",
+    "hash": "e7d391baea23e95bc57d90ed9f44f3f5",
+    "content-hash": "f9adbfd02c2f93771f85e033c8b0e050",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -33,6 +33,47 @@
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "time": "2014-12-30 15:22:37"
+        },
+        {
+            "name": "leancloud/leancloud-sdk",
+            "version": "v0.3.0-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leancloud/php-sdk.git",
+                "reference": "6dd1265ace01e0e0e287706187870aea78056f42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://packagist.phpcomposer.com/files/leancloud/php-sdk/6dd1265ace01e0e0e287706187870aea78056f42.zip",
+                "reference": "6dd1265ace01e0e0e287706187870aea78056f42",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*"
+            },
+            "require-dev": {
+                "apigen/apigen": "^4.1",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeanCloud\\": "src/LeanCloud"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Juvenn Woo",
+                    "email": "yun.wu@leancloud.rocks"
+                }
+            ],
+            "description": "LeanCloud PHP SDK",
+            "homepage": "https://github.com/leancloud/php-sdk",
+            "keywords": [
+                "leancloud"
+            ],
+            "time": "2015-12-23 09:38:33"
         },
         {
             "name": "nikic/fast-route",
@@ -242,9 +283,13 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "leancloud/leancloud-sdk": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.5"
+    },
     "platform-dev": []
 }

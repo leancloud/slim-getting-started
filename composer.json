@@ -1,5 +1,11 @@
 {
     "require": {
-        "slim/slim": "^3.0"
-    }
+        "php": ">=5.5",
+        "slim/slim": "^3.0",
+        "leancloud/leancloud-sdk": "0.3.*@alpha"
+    },
+    "repositories": [
+        {"type": "composer", "url": "http://packagist.phpcomposer.com"},
+        {"packagist": false}
+    ]
 }
