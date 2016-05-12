@@ -16,6 +16,7 @@ use \LeanCloud\Storage\CookieStorage;
 use \LeanCloud\Engine\SlimEngine;
 
 $app = new \Slim\App();
+unset($app->getContainer()['errorHandler']);
 
 LeanClient::initialize(
     getenv("LC_APP_ID"),
@@ -40,6 +41,7 @@ $app->post('/randomInt', function (Request $request, Response $response) {
     // parse min and max from request body
     $body = $request->getBody();
     $json = json_decode($body, true);
+
     // or simply
     // $json = $request->getParsedBody();
 
@@ -53,6 +55,10 @@ $app->post('/randomInt', function (Request $request, Response $response) {
     $newResponse = $response->withHeader("Content-Type", "application/json");
     $newResponse->getBody()->write(json_encode($result));
     return $newResponse;
+});
+
+$app->get('/error', function (Request $request, Response $response) {
+        throw new Exception('Intentionally throwing exception');
 });
 
 $app->run();
