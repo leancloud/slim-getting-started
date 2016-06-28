@@ -16,6 +16,7 @@ use \LeanCloud\Storage\CookieStorage;
 use \LeanCloud\Engine\SlimEngine;
 
 $app = new \Slim\App();
+// 禁用 Slim 默认的 handler，使得错误栈被日志捕捉
 unset($app->getContainer()['errorHandler']);
 
 LeanClient::initialize(
@@ -23,10 +24,10 @@ LeanClient::initialize(
     getenv("LC_APP_KEY"),
     getenv("LC_APP_MASTER_KEY")
 );
-// persist sessionToken in cookie
+// 将 sessionToken 持久化到 cookie 中，以支持多实例共享会话
 LeanClient::setStorage(new CookieStorage());
 
-// SlimEngine::enableHttpsRedirect();
+SlimEngine::enableHttpsRedirect();
 $app->add(new SlimEngine());
 
 $app->get('/hello/{name}', function (Request $request, Response $response) {
