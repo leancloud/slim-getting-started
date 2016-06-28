@@ -2,10 +2,11 @@
     "require": {
         "php": ">=5.5",
         "slim/slim": "^3.0",
-        "leancloud/leancloud-sdk": "0.3.*@alpha"
+        "leancloud/leancloud-sdk": "dev-master"
     },
     "repositories": [
         {"type": "composer", "url": "http://packagist.phpcomposer.com"},
+        {"type": "vcs", "url": "https://github.com/juvenn/php-sdk"},
         {"packagist": false}
     ]
 }
