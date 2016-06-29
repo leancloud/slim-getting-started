@@ -11,6 +11,12 @@ Cloud::define("sayHello", function($params, $user) {
     return "hello {$params['name']}";
 });
 
+// /1.1/functions/timeout
+Cloud::define("timeout", function($params, $user) {
+    sleep(5 * 60);
+    return "ok";
+});
+
 /*
 
 Cloud::onLogin(function($user) {
