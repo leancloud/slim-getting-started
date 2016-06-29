@@ -14,7 +14,7 @@ Cloud::define("sayHello", function($params, $user) {
 // /1.1/functions/sleep
 Cloud::define("sleep", function($params, $user) {
     $seconds = isset($params["seconds"]) ? $params["seconds"] : 300;
-    echo "Sleeping for {$seconds} seconds";
+    error_log("Sleeping for {$seconds} seconds");
     sleep($seconds);
     return "ok";
 });
