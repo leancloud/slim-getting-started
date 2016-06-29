@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f0e8de682dd97e793075d8e81e662084",
-    "content-hash": "565658a52ba184b7c39967e1cb066f1b",
+    "hash": "373c2b5bb3ecf7a8e83f9b9123d587af",
+    "content-hash": "223f01fd35373662e5d6b70126c7d20c",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -36,16 +36,16 @@
         },
         {
             "name": "leancloud/leancloud-sdk",
-            "version": "dev-master",
+            "version": "v0.3.0-alpha.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leancloud/php-sdk.git",
-                "reference": "c8cd54f6e89c1a35e5d79f3ef18e362803061e6d"
+                "reference": "49aa316914a287bec003a2d38342204ebdd14056"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/leancloud/php-sdk/c8cd54f6e89c1a35e5d79f3ef18e362803061e6d.zip",
-                "reference": "c8cd54f6e89c1a35e5d79f3ef18e362803061e6d",
+                "url": "https://api.github.com/repos/leancloud/php-sdk/zipball/49aa316914a287bec003a2d38342204ebdd14056",
+                "reference": "49aa316914a287bec003a2d38342204ebdd14056",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
             "keywords": [
                 "leancloud"
             ],
-            "time": "2016-05-17 02:56:34"
+            "time": "2016-06-29 05:42:25"
         },
         {
             "name": "nikic/fast-route",
@@ -85,7 +85,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/nikic/FastRoute/8ea928195fa9b907f0d6e48312d323c1a13cc2af.zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/8ea928195fa9b907f0d6e48312d323c1a13cc2af",
                 "reference": "8ea928195fa9b907f0d6e48312d323c1a13cc2af",
                 "shasum": ""
             },
@@ -128,7 +128,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/silexphp/Pimple/a30f7d6e57565a2e1a316e1baf2a483f788b258a.zip",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/a30f7d6e57565a2e1a316e1baf2a483f788b258a",
                 "reference": "a30f7d6e57565a2e1a316e1baf2a483f788b258a",
                 "shasum": ""
             },
@@ -174,7 +174,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/php-fig/http-message/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298.zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
                 "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
                 "shasum": ""
             },
@@ -223,7 +223,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/slimphp/Slim/a132385f736063d00632b52b3f8a389fe66fe4fa.zip",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/a132385f736063d00632b52b3f8a389fe66fe4fa",
                 "reference": "a132385f736063d00632b52b3f8a389fe66fe4fa",
                 "shasum": ""
             },
@@ -288,7 +288,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "leancloud/leancloud-sdk": 20
+        "leancloud/leancloud-sdk": 15
     },
     "prefer-stable": false,
     "prefer-lowest": false,
