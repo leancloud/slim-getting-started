@@ -19,6 +19,35 @@ Cloud::define("sleep", function($params, $user) {
     return "ok";
 });
 
+// /1.1/functions/sievePrime
+Cloud::define("sievePrime", function($params, $user) {
+    $n = isset($params["n"]) ? $params["n"] : 1000;
+    error_log("Find prime numbers less than {$n}");
+    $primeMarks = array();
+    for ($i = 0; $i <= $n; $i++) {
+        $primeMarks[$i] = true;
+    }
+    $primeMarks[0] = false;
+    $primeMarks[1] = false;
+
+    $x = round(sqrt($n));
+    for ($i = 2; $i <= $x; $i++) {
+        if ($primeMarks[$i]) {
+            for ($j = $i * $i; $j <= $n;  $j = $j + $i) {
+                $primeMarks[$j] = false;
+            }
+        }
+    }
+
+    $numbers = array();
+    forEach($primeMarks as $i => $mark) {
+        if ($mark) {
+            $numbers[] = $i;
+        }
+    }
+    return $numbers;
+});
+
 /*
 
 Cloud::onLogin(function($user) {
