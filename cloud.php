@@ -11,10 +11,10 @@ Cloud::define("sayHello", function($params, $user) {
     return "hello {$params['name']}";
 });
 
-// /1.1/functions/timeout
-Cloud::define("timeout", function($params, $user) {
-    $timeout = isset($params["timeout"]) ? $params["timeout"] : 300;
-    sleep($timeout);
+// /1.1/functions/sleep
+Cloud::define("sleep", function($params, $user) {
+    $seconds = isset($params["seconds"]) ? $params["seconds"] : 300;
+    sleep($seconds);
     return "ok";
 });
 
