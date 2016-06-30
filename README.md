@@ -9,7 +9,7 @@
 
 ```
 $ git clone git@github.com:leancloud/slim-getting-started.git
-$ cd slim-js-getting-started
+$ cd slim-getting-started
 ```
 
 安装依赖：
