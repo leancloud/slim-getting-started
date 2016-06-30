@@ -34,6 +34,8 @@ lean up
 
 应用即可启动运行：[localhost:3000](http://localhost:3000)
 
+同时开启的还有云函数的本地调试工具：[localhost:3001](http://localhost:3001)
+
 ## 部署到 LeanEngine
 
 部署到预备环境（若无预备环境则直接部署到生产环境）：
