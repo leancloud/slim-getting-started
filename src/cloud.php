@@ -11,16 +11,8 @@ Cloud::define("sayHello", function($params, $user) {
     return "hello {$params['name']}";
 });
 
-// /1.1/functions/sleep
-Cloud::define("sleep", function($params, $user) {
-    $seconds = isset($params["seconds"]) ? $params["seconds"] : 300;
-    error_log("Sleeping for {$seconds} seconds");
-    sleep($seconds);
-    return "ok";
-});
-
-// /1.1/functions/sievePrime
-Cloud::define("sievePrime", function($params, $user) {
+// /1.1/functions/sieveOfPrimes
+Cloud::define("sieveOfPrimes", function($params, $user) {
     $n = isset($params["n"]) ? $params["n"] : 1000;
     error_log("Find prime numbers less than {$n}");
     $primeMarks = array();

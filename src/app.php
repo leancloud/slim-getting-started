@@ -1,6 +1,6 @@
 <?php
-require 'vendor/autoload.php';
-require 'cloud.php';
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/cloud.php';
 
 /*
  * A simple Slim based sample application
@@ -56,10 +56,6 @@ $app->post('/randomInt', function (Request $request, Response $response) {
     $newResponse = $response->withHeader("Content-Type", "application/json");
     $newResponse->getBody()->write(json_encode($result));
     return $newResponse;
-});
-
-$app->get('/error', function (Request $request, Response $response) {
-        throw new Exception('Intentionally throwing exception');
 });
 
 $app->run();
