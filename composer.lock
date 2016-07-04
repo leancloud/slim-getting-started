@@ -36,16 +36,16 @@
         },
         {
             "name": "leancloud/leancloud-sdk",
-            "version": "v0.3.0-alpha.2",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leancloud/php-sdk.git",
-                "reference": "49aa316914a287bec003a2d38342204ebdd14056"
+                "reference": "3b54738511602129d7d71e02ad9416a9db83c7e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leancloud/php-sdk/zipball/49aa316914a287bec003a2d38342204ebdd14056",
-                "reference": "49aa316914a287bec003a2d38342204ebdd14056",
+                "url": "https://packagist.phpcomposer.com/files/leancloud/php-sdk/3b54738511602129d7d71e02ad9416a9db83c7e3.zip",
+                "reference": "3b54738511602129d7d71e02ad9416a9db83c7e3",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
             "keywords": [
                 "leancloud"
             ],
-            "time": "2016-06-29 05:42:25"
+            "time": "2016-06-30 07:09:00"
         },
         {
             "name": "nikic/fast-route",
