@@ -11,9 +11,12 @@ require __DIR__ . '/../src/cloud.php';
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use \Slim\Views\PhpRenderer;
 use \LeanCloud\LeanClient;
 use \LeanCloud\Storage\CookieStorage;
 use \LeanCloud\Engine\SlimEngine;
+use \LeanCloud\LeanQuery;
+use \LeanCloud\LeanObject;
 
 $app = new \Slim\App();
 // 禁用 Slim 默认的 handler，使得错误栈被日志捕捉
@@ -30,32 +33,47 @@ LeanClient::setStorage(new CookieStorage());
 SlimEngine::enableHttpsRedirect();
 $app->add(new SlimEngine());
 
+// 使用 Slim/PHP-View 作为模版引擎
+$container = $app->getContainer();
+$container["view"] = function($container) {
+    return new \Slim\Views\PhpRenderer(__DIR__ . "/views/");
+};
+
+$app->get('/', function (Request $request, Response $response) {
+    return $this->view->render($response, "index.phtml", array(
+        "currentTime" => new \DateTime(),
+    ));
+});
+
+// 显示 todo 列表
+$app->get('/todos', function(Request $request, Response $response) {
+    $query = new LeanQuery("Todo");
+    $query->descend("createdAt");
+    try {
+        $todos = $query->find();
+    } catch (\Exception $ex) {
+        error_log("Query todo failed!");
+        $todos = array();
+    }
+    return $this->view->render($response, "todos.phtml", array(
+        "title" => "TODO 列表",
+        "todos" => $todos,
+    ));
+});
+
+$app->post("/todos", function(Request $request, Response $response) {
+    $data = $request->getParsedBody();
+    $todo = new LeanObject("Todo");
+    $todo->set("content", $data["content"]);
+    $todo->save();
+    return $response->withStatus(302)->withHeader("Location", "/todos");
+});
+
 $app->get('/hello/{name}', function (Request $request, Response $response) {
     $name = $request->getAttribute('name');
     $response->getBody()->write("Hello, $name");
 
     return $response;
-});
-
-// compute a random integer between min and max
-$app->post('/randomInt', function (Request $request, Response $response) {
-    // parse min and max from request body
-    $body = $request->getBody();
-    $json = json_decode($body, true);
-
-    // or simply
-    // $json = $request->getParsedBody();
-
-    $val    = rand($json["min"], $json["max"]);
-    $result = array(
-        "value"       => $val,
-        "currentTime" => date(DATE_ATOM),
-    );
-    
-    // PSR-7 response is immutable
-    $newResponse = $response->withHeader("Content-Type", "application/json");
-    $newResponse->getBody()->write(json_encode($result));
-    return $newResponse;
 });
 
 $app->run();

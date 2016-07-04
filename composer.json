@@ -2,7 +2,8 @@
     "require": {
         "php": ">=5.5",
         "slim/slim": "^3.0",
-        "leancloud/leancloud-sdk": "^0.3.0@alpha"
+        "leancloud/leancloud-sdk": "^0.3.0@alpha",
+        "slim/php-view": "^2.1"
     },
     "repositories": {
         "packagist": {
