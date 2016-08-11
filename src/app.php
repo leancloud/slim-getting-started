@@ -12,23 +12,23 @@ require __DIR__ . '/../src/cloud.php';
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 use \Slim\Views\PhpRenderer;
-use \LeanCloud\LeanClient;
+use \LeanCloud\Client;
 use \LeanCloud\Storage\CookieStorage;
 use \LeanCloud\Engine\SlimEngine;
-use \LeanCloud\LeanQuery;
-use \LeanCloud\LeanObject;
+use \LeanCloud\Query;
+use \LeanCloud\Object;
 
 $app = new \Slim\App();
 // 禁用 Slim 默认的 handler，使得错误栈被日志捕捉
 unset($app->getContainer()['errorHandler']);
 
-LeanClient::initialize(
+Client::initialize(
     getenv("LC_APP_ID"),
     getenv("LC_APP_KEY"),
     getenv("LC_APP_MASTER_KEY")
 );
 // 将 sessionToken 持久化到 cookie 中，以支持多实例共享会话
-LeanClient::setStorage(new CookieStorage());
+Client::setStorage(new CookieStorage());
 
 SlimEngine::enableHttpsRedirect();
 $app->add(new SlimEngine());
@@ -47,7 +47,7 @@ $app->get('/', function (Request $request, Response $response) {
 
 // 显示 todo 列表
 $app->get('/todos', function(Request $request, Response $response) {
-    $query = new LeanQuery("Todo");
+    $query = new Query("Todo");
     $query->descend("createdAt");
     try {
         $todos = $query->find();
@@ -63,7 +63,7 @@ $app->get('/todos', function(Request $request, Response $response) {
 
 $app->post("/todos", function(Request $request, Response $response) {
     $data = $request->getParsedBody();
-    $todo = new LeanObject("Todo");
+    $todo = new Object("Todo");
     $todo->set("content", $data["content"]);
     $todo->save();
     return $response->withStatus(302)->withHeader("Location", "/todos");

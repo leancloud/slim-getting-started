@@ -51,7 +51,7 @@ lean publish
 ## 相关文档
 
 * [PHP 网站托管开发指南](https://leancloud.cn/docs/leanengine_webhosting_guide-php.html)
-* [PHP 网站托管开发指南](https://leancloud.cn/docs/leanengine_cloudfunction_guide-php.html)
+* [PHP 云函数开发指南](https://leancloud.cn/docs/leanengine_cloudfunction_guide-php.html)
 * [PHP 数据存储开发指南](https://leancloud.cn/docs/leanstorage_guide-php.html)
 * [PHP SDK API 文档](https://leancloud.cn/api-docs/php/)
 
