@@ -23,12 +23,14 @@ $app = new \Slim\App();
 unset($app->getContainer()['errorHandler']);
 
 Client::initialize(
-    getenv("LC_APP_ID"),
-    getenv("LC_APP_KEY"),
-    getenv("LC_APP_MASTER_KEY")
+    getenv("LEANCLOUD_APP_ID"),
+    getenv("LEANCLOUD_APP_KEY"),
+    getenv("LEANCLOUD_APP_MASTER_KEY")
 );
 // 将 sessionToken 持久化到 cookie 中，以支持多实例共享会话
 Client::setStorage(new CookieStorage());
+Client::useProduction((getenv("LEANCLOUD_APP_ENV") === "production") ? true : false);
+Client::useRegion(getenv("LEANCLOUD_REGION"));
 
 SlimEngine::enableHttpsRedirect();
 $app->add(new SlimEngine());
