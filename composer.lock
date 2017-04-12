@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dbb20dafcda1b7ec0e1238a50b608eba",
-    "content-hash": "4145a71495a055f19fd6ade7cde6cdf7",
+    "content-hash": "d738b0887614d6ee785317239f37fd4b",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -32,20 +31,20 @@
                 "MIT"
             ],
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
-            "time": "2014-12-30 15:22:37"
+            "time": "2014-12-30T15:22:37+00:00"
         },
         {
             "name": "leancloud/leancloud-sdk",
-            "version": "v0.5.4",
+            "version": "v0.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leancloud/php-sdk.git",
-                "reference": "1a1a9bdb7e8c83f212abaf0816fea6f53cdbd0d2"
+                "reference": "1047caa60c012178e9b248611f38ecb0520807fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/leancloud/php-sdk/1a1a9bdb7e8c83f212abaf0816fea6f53cdbd0d2.zip",
-                "reference": "1a1a9bdb7e8c83f212abaf0816fea6f53cdbd0d2",
+                "url": "https://files.phpcomposer.com/files/leancloud/php-sdk/1047caa60c012178e9b248611f38ecb0520807fa.zip",
+                "reference": "1047caa60c012178e9b248611f38ecb0520807fa",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +72,7 @@
             "keywords": [
                 "leancloud"
             ],
-            "time": "2017-02-27 08:20:35"
+            "time": "2017-04-12T06:39:51+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -116,7 +115,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2016-06-12 19:08:51"
+            "time": "2016-06-12T19:08:51+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -162,7 +161,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2015-09-11 15:10:35"
+            "time": "2015-09-11T15:10:35+00:00"
         },
         {
             "name": "psr/http-message",
@@ -212,7 +211,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "slim/php-view",
@@ -261,7 +260,7 @@
                 "template",
                 "view"
             ],
-            "time": "2016-03-04 09:48:50"
+            "time": "2016-03-04T09:48:50+00:00"
         },
         {
             "name": "slim/slim",
@@ -331,7 +330,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2016-07-26 15:12:13"
+            "time": "2016-07-26T15:12:13+00:00"
         }
     ],
     "packages-dev": [],
