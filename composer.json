@@ -1,6 +1,6 @@
 {
     "require": {
-        "php": ">=5.5",
+        "php": ">=5.6",
         "slim/slim": "^3.0",
         "leancloud/leancloud-sdk": "^0.5.5",
         "slim/php-view": "^2.1"
