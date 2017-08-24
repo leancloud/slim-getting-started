@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d738b0887614d6ee785317239f37fd4b",
+    "content-hash": "ab8e9bf2197d227e745ddbc8df26ebc0",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -35,16 +35,16 @@
         },
         {
             "name": "leancloud/leancloud-sdk",
-            "version": "v0.5.5",
+            "version": "v0.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leancloud/php-sdk.git",
-                "reference": "1047caa60c012178e9b248611f38ecb0520807fa"
+                "reference": "f1c9219b4dd8b28af2bd3f4eddd1897e0e9b7177"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/leancloud/php-sdk/1047caa60c012178e9b248611f38ecb0520807fa.zip",
-                "reference": "1047caa60c012178e9b248611f38ecb0520807fa",
+                "url": "https://files.phpcomposer.com/files/leancloud/php-sdk/f1c9219b4dd8b28af2bd3f4eddd1897e0e9b7177.zip",
+                "reference": "f1c9219b4dd8b28af2bd3f4eddd1897e0e9b7177",
                 "shasum": ""
             },
             "require": {
@@ -72,7 +72,7 @@
             "keywords": [
                 "leancloud"
             ],
-            "time": "2017-04-12T06:39:51+00:00"
+            "time": "2017-04-13T07:07:31+00:00"
         },
         {
             "name": "nikic/fast-route",
