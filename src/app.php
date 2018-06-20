@@ -16,7 +16,7 @@ use \LeanCloud\Client;
 use \LeanCloud\Storage\CookieStorage;
 use \LeanCloud\Engine\SlimEngine;
 use \LeanCloud\Query;
-use \LeanCloud\Object;
+use \LeanCloud\LeanObject;
 
 $app = new \Slim\App();
 // 禁用 Slim 默认的 handler，使得错误栈被日志捕捉
@@ -64,7 +64,7 @@ $app->get('/todos', function(Request $request, Response $response) {
 
 $app->post("/todos", function(Request $request, Response $response) {
     $data = $request->getParsedBody();
-    $todo = new Object("Todo");
+    $todo = new LeanObject("Todo");
     $todo->set("content", $data["content"]);
     $todo->save();
     return $response->withStatus(302)->withHeader("Location", "/todos");
