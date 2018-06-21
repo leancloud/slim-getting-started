@@ -1,7 +1,6 @@
 # Slim Getting Started
 
-一个基于 [Slim 框架](http://slimframework.com/) 的 PHP 应用,可以
-运行在 LeanEngine PHP 运行时环境。
+一个基于 [Slim 框架](http://slimframework.com/) 的 PHP 应用,可以运行在 LeanEngine PHP 运行时环境。
 
 ## 本地运行
 
@@ -21,10 +20,8 @@ composer install
 关联应用：
 
 ```
-lean app add origin <appId>
+lean switch
 ```
-
-这里的 appId 填上你在 LeanCloud 上创建的某一应用的 appId 即可。origin 则有点像 Git 里的 remote 名称。
 
 启动项目：
 
@@ -54,4 +51,3 @@ lean publish
 * [PHP 云函数开发指南](https://leancloud.cn/docs/leanengine_cloudfunction_guide-php.html)
 * [PHP 数据存储开发指南](https://leancloud.cn/docs/leanstorage_guide-php.html)
 * [PHP SDK API 文档](https://leancloud.cn/api-docs/php/)
-
