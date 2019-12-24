@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a5f6feca32a293769efe03d540617ee",
+    "content-hash": "3b2fa2c5201d665343a0960d84d91c56",
     "packages": [
         {
             "name": "leancloud/leancloud-sdk",
@@ -419,7 +419,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.4.x"
+        "php": "7.3.x"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
