@@ -19,7 +19,7 @@ use \LeanCloud\Query;
 use \LeanCloud\LeanObject;
 
 $app = new \Slim\App();
-// 禁用 Slim 默认的 handler，使得错误栈被日志捕捉
+// Disable Slim default handler, thus logger can capture the error stack.
 unset($app->getContainer()['errorHandler']);
 
 Client::initialize(
@@ -27,14 +27,14 @@ Client::initialize(
     getenv("LEANCLOUD_APP_KEY"),
     getenv("LEANCLOUD_APP_MASTER_KEY")
 );
-// 将 sessionToken 持久化到 cookie 中，以支持多实例共享会话
+// Store sessionToken in cookies to support multiple instances sharing one session.
 Client::setStorage(new CookieStorage());
 Client::useProduction((getenv("LEANCLOUD_APP_ENV") === "production") ? true : false);
 
 SlimEngine::enableHttpsRedirect();
 $app->add(new SlimEngine());
 
-// 使用 Slim/PHP-View 作为模版引擎
+// Use Slim/PHP-View as the template engine.
 $container = $app->getContainer();
 $container["view"] = function($container) {
     return new \Slim\Views\PhpRenderer(__DIR__ . "/views/");
@@ -46,7 +46,7 @@ $app->get('/', function (Request $request, Response $response) {
     ));
 });
 
-// 显示 todo 列表
+// Show todo list.
 $app->get('/todos', function(Request $request, Response $response) {
     $query = new Query("Todo");
     $query->descend("createdAt");
