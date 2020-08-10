@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e2340d98cbcc7cf20c3fb07e05f5bcc",
+    "content-hash": "871dd8137871a19a54248cd398f447c5",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -45,16 +45,16 @@
         },
         {
             "name": "leancloud/leancloud-sdk",
-            "version": "v0.8.1",
+            "version": "v0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leancloud/php-sdk.git",
-                "reference": "dad11751b427ec84c4032e4036dc241174df4a4f"
+                "reference": "e7d3480c1da6f91c23feaf2da3a14a4706e2c099"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leancloud/php-sdk/zipball/dad11751b427ec84c4032e4036dc241174df4a4f",
-                "reference": "dad11751b427ec84c4032e4036dc241174df4a4f",
+                "url": "https://api.github.com/repos/leancloud/php-sdk/zipball/e7d3480c1da6f91c23feaf2da3a14a4706e2c099",
+                "reference": "e7d3480c1da6f91c23feaf2da3a14a4706e2c099",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -90,7 +90,7 @@
             "keywords": [
                 "leancloud"
             ],
-            "time": "2018-09-25T06:29:17+00:00"
+            "time": "2019-10-25T10:19:48+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -368,16 +368,16 @@
         },
         {
             "name": "slim/slim",
-            "version": "3.12.1",
+            "version": "3.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "eaee12ef8d0750db62b8c548016d82fb33addb6b"
+                "reference": "200c6143f15baa477601879b64ab2326847aac0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/eaee12ef8d0750db62b8c548016d82fb33addb6b",
-                "reference": "eaee12ef8d0750db62b8c548016d82fb33addb6b",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/200c6143f15baa477601879b64ab2326847aac0b",
+                "reference": "200c6143f15baa477601879b64ab2326847aac0b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -388,6 +388,9 @@
             },
             "require": {
                 "container-interop/container-interop": "^1.2",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-simplexml": "*",
                 "nikic/fast-route": "^1.0",
                 "php": ">=5.5.0",
                 "pimple/pimple": "^3.0",
@@ -413,24 +416,24 @@
             ],
             "authors": [
                 {
-                    "name": "Rob Allen",
-                    "email": "rob@akrabat.com",
-                    "homepage": "http://akrabat.com"
-                },
-                {
                     "name": "Josh Lockhart",
                     "email": "hello@joshlockhart.com",
                     "homepage": "https://joshlockhart.com"
                 },
                 {
-                    "name": "Gabriel Manricks",
-                    "email": "gmanricks@me.com",
-                    "homepage": "http://gabrielmanricks.com"
-                },
-                {
                     "name": "Andrew Smith",
                     "email": "a.smith@silentworks.co.uk",
                     "homepage": "http://silentworks.co.uk"
+                },
+                {
+                    "name": "Rob Allen",
+                    "email": "rob@akrabat.com",
+                    "homepage": "http://akrabat.com"
+                },
+                {
+                    "name": "Gabriel Manricks",
+                    "email": "gmanricks@me.com",
+                    "homepage": "http://gabrielmanricks.com"
                 }
             ],
             "description": "Slim is a PHP micro framework that helps you quickly write simple yet powerful web applications and APIs",
@@ -441,7 +444,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2019-04-16T16:47:29+00:00"
+            "time": "2019-08-20T18:46:05+00:00"
         }
     ],
     "packages-dev": [],
