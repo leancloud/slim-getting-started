@@ -17,6 +17,7 @@ use \LeanCloud\Storage\CookieStorage;
 use \LeanCloud\Engine\SlimEngine;
 use \LeanCloud\Query;
 use \LeanCloud\LeanObject;
+use BananaProject\Hello;
 
 $app = new \Slim\App();
 // Disable Slim default handler, thus logger can capture the error stack.
@@ -70,11 +71,15 @@ $app->post("/todos", function(Request $request, Response $response) {
     return $response->withStatus(302)->withHeader("Location", "/todos");
 });
 
-$app->get('/hello/{name}', function (Request $request, Response $response) {
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
-
-    return $response;
+$app->get('/hello/{name}', function (Request $request, Response $response) {    
+    $name = $request->getAttribute("name");
+    if ($name === "banana") {
+        $hello = new Hello;
+        $hello->say();
+    } else {
+        $response->getBody()->write("Hello, $name");
+        return $response;
+    }
 });
 
 $app->run();
