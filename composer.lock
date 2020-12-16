@@ -4,57 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "871dd8137871a19a54248cd398f447c5",
+    "content-hash": "6a5f6feca32a293769efe03d540617ee",
     "packages": [
         {
-            "name": "container-interop/container-interop",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/container-interop/container-interop.git",
-                "reference": "79cbf1341c22ec75643d841642dd5d6acd83bdb8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/container-interop/container-interop/zipball/79cbf1341c22ec75643d841642dd5d6acd83bdb8",
-                "reference": "79cbf1341c22ec75643d841642dd5d6acd83bdb8",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "psr/container": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Interop\\Container\\": "src/Interop/Container/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
-            "homepage": "https://github.com/container-interop/container-interop",
-            "time": "2017-02-14T19:40:03+00:00"
-        },
-        {
             "name": "leancloud/leancloud-sdk",
-            "version": "v0.11.0",
+            "version": "v0.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leancloud/php-sdk.git",
-                "reference": "e7d3480c1da6f91c23feaf2da3a14a4706e2c099"
+                "reference": "f3667a53ae00cacb5df88876c8f931e89a6eab61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leancloud/php-sdk/zipball/e7d3480c1da6f91c23feaf2da3a14a4706e2c099",
-                "reference": "e7d3480c1da6f91c23feaf2da3a14a4706e2c099",
+                "url": "https://api.github.com/repos/leancloud/php-sdk/zipball/f3667a53ae00cacb5df88876c8f931e89a6eab61",
+                "reference": "f3667a53ae00cacb5df88876c8f931e89a6eab61",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -79,6 +42,9 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
             "authors": [
                 {
                     "name": "Juvenn Woo",
@@ -90,7 +56,7 @@
             "keywords": [
                 "leancloud"
             ],
-            "time": "2019-10-25T10:19:48+00:00"
+            "time": "2020-12-15T04:24:10+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -146,16 +112,16 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.2.3",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32"
+                "reference": "21e45061c3429b1e06233475cc0e1f6fc774d5b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/9e403941ef9d65d20cba7d54e29fe906db42cf32",
-                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/21e45061c3429b1e06233475cc0e1f6fc774d5b0",
+                "reference": "21e45061c3429b1e06233475cc0e1f6fc774d5b0",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -165,16 +131,16 @@
                 ]
             },
             "require": {
-                "php": ">=5.3.0",
+                "php": ">=7.2.5",
                 "psr/container": "^1.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^3.2"
+                "symfony/phpunit-bridge": "^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2.x-dev"
+                    "dev-master": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -193,12 +159,12 @@
                 }
             ],
             "description": "Pimple, a simple Dependency Injection Container",
-            "homepage": "http://pimple.sensiolabs.org",
+            "homepage": "https://pimple.symfony.com",
             "keywords": [
                 "container",
                 "dependency injection"
             ],
-            "time": "2018-01-21T07:42:36+00:00"
+            "time": "2020-11-24T20:35:42+00:00"
         },
         {
             "name": "psr/container",
@@ -368,16 +334,16 @@
         },
         {
             "name": "slim/slim",
-            "version": "3.12.2",
+            "version": "3.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slimphp/Slim.git",
-                "reference": "200c6143f15baa477601879b64ab2326847aac0b"
+                "reference": "1c9318a84ffb890900901136d620b4f03a59da38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slimphp/Slim/zipball/200c6143f15baa477601879b64ab2326847aac0b",
-                "reference": "200c6143f15baa477601879b64ab2326847aac0b",
+                "url": "https://api.github.com/repos/slimphp/Slim/zipball/1c9318a84ffb890900901136d620b4f03a59da38",
+                "reference": "1c9318a84ffb890900901136d620b4f03a59da38",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -387,7 +353,6 @@
                 ]
             },
             "require": {
-                "container-interop/container-interop": "^1.2",
                 "ext-json": "*",
                 "ext-libxml": "*",
                 "ext-simplexml": "*",
@@ -444,7 +409,7 @@
                 "micro",
                 "router"
             ],
-            "time": "2019-08-20T18:46:05+00:00"
+            "time": "2019-11-28T17:40:33+00:00"
         }
     ],
     "packages-dev": [],
@@ -454,7 +419,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "7.2.x"
+        "php": "7.4.x"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
